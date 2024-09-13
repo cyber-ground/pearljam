@@ -12,17 +12,8 @@
 const startBtn = document.querySelector('.start-btn'); 
 const gameClearMessage = document.querySelector('.game-clear');
 const gameOverMessage = document.querySelector('.game-over');
-
-  function init() {
-    // startBtn.classList.add('js_displayNone');
-    // gameClearMessage.classList.add('js_displayNone');
-    // gameOverMessage.classList.add('js_displayNone');
-    // startBtn.style.opacity = 0.5;
-    // gameClearMessage.style.opacity = 1;
-    // gameOverMessage.style.opacity = 1;
-  } init();
-
 const cards = document.querySelectorAll('.memory-card');
+
   cards.forEach(card => {
     card.addEventListener('click', flipCard);
   });
@@ -79,25 +70,21 @@ function unMatchedCards() {
 
 function gameClear() {
   if(matched === cards.length / 2) {  
-    setTimeout(() => {      
-      // gameClearMessage.classList.remove('.js_displayNone');                 
-      gameClearMessage.classList.add('js_displayBlock');
+    setTimeout(() => {               
+      gameClearMessage.classList.add('.js_visible');
       disableCards();
-      setTimeout(() => {
-        // startBtn.classList.remove('.js_displayNone');    
-        startBtn.classList.add('js_displayBlock');   
+      setTimeout(() => { 
+        startBtn.classList.add('.js_visible');
       }, 3000);
     }, 500);
   }
 }
 
-function gameOver() {
-  // gameOverMessage.classList.remove('.js_displayNone');                                  
-  gameOverMessage.classList.add('js_displayBlock');                                
+function gameOver() {                                  
+  gameOverMessage.classList.add('.js_visible');                         
   disableCards();                                                     
-  setTimeout(() => {                                                
-    // startBtn.classList.remove('.js_displayNone');                                 
-    startBtn.classList.add('js_displayBlock');                                   
+  setTimeout(() => {
+    startBtn.classList.add('.js_visible');                          
   }, 1500);  
 }
 
