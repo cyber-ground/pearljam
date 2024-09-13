@@ -71,20 +71,20 @@ function unMatchedCards() {
 function gameClear() {
   if(matched === cards.length / 2) {  
     setTimeout(() => {               
-      gameClearMessage.classList.add('.js_visible');
+      gameClearMessage.classList.add('js_visible');
       disableCards();
       setTimeout(() => { 
-        startBtn.classList.add('.js_visible');
+        startBtn.classList.add('js_visible');
       }, 3000);
     }, 500);
   }
 }
 
 function gameOver() {                                  
-  gameOverMessage.classList.add('.js_visible');                         
+  gameOverMessage.classList.add('js_visible');                         
   disableCards();                                                     
   setTimeout(() => {
-    startBtn.classList.add('.js_visible');                          
+    startBtn.classList.add('js_visible');                          
   }, 1500);  
 }
 
