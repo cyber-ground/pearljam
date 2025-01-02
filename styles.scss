@@ -21,6 +21,9 @@
 // --- PEARL JAM ---
 //---------------------------------------------------------------------
 
+html {
+  overscroll-behavior-y: none;
+}
 
 body {
   height: 100vh;
